@@ -8,7 +8,7 @@ public abstract class Account {
     private static double annualInterestRate; // % scale
     private int id;
     private double balance;
-    private final Date dateCreated;
+    protected Date dateCreated;
 
     protected Account() { this(1000, 0.0); }
     protected Account(int id, double balance) {
@@ -69,8 +69,6 @@ public abstract class Account {
     public void deposit(double amount) {
         if (amount > 0) {
             setBalance(getBalance() + amount);
-            System.out.printf("Deposited %.2f - New balance: %.2f\n",
-                    amount, getBalance());
         } else {
             System.out.println("Invalid amount.. Amount to deposit needs to be positive.");
         }
