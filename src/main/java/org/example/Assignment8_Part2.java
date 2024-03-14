@@ -21,7 +21,7 @@ public class Assignment8_Part2 {
 
         for (ComparableAccount account : accounts) {
             try {
-                // clone() returns Object type, needs to be downcast
+                // clone() returns Object type, therefore, needs to be downcast
                 ComparableAccount cloned = (ComparableAccount)account.clone();
                 clonedAccounts.add(cloned);
             } catch (CloneNotSupportedException e) {
